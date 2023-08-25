@@ -13,10 +13,11 @@ app.use(express.urlencoded({ extended: true }))
 //Application routes
 app.use('/api/v1/users/', UserRoutes)
 
-//testing api
-// app.get('/', (req: Request, res: Response, next: NextFunction) => {
+// testing api
+// app.get('/', async (req: Request, res: Response, next: NextFunction) => {
 //   // res.send('Working')
-//   throw new ApiError(400, 'Custom Error')
+//   // throw new ApiError(400, 'Custom Error')
+//   Promise.reject(new Error('Unhadle promise rejection'))
 // })
 
 //global error handler
