@@ -142,3 +142,27 @@
   label: 'UNI',
   timestamp: '2023-10-24T08:40:29.390Z'
 }
+{
+  message: 'Database is connected.',
+  level: 'info',
+  label: 'UNI',
+  timestamp: '2023-10-24T08:40:51.442Z'
+}
+{
+  message: 'Server is listening to 5000',
+  level: 'info',
+  label: 'UNI',
+  timestamp: '2023-10-24T08:40:51.459Z'
+}
+{
+  message: 'Database is connected.',
+  level: 'info',
+  label: 'UNI',
+  timestamp: '2023-10-24T08:41:44.356Z'
+}
+{
+  message: 'Server is listening to 5000',
+  level: 'info',
+  label: 'UNI',
+  timestamp: '2023-10-24T08:41:44.376Z'
+}

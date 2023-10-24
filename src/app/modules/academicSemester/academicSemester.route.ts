@@ -10,4 +10,10 @@ router.post(
   AcademicSemesterController.createSemester,
 )
 
+router.get(
+  '/',
+  // validateRequest(AcademicSemesterValidation.createAcademicSemesterZodSchema),
+  AcademicSemesterController.getAllSemesters,
+)
+
 export const AcademicSemesterRoutes = router
