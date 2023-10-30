@@ -24,7 +24,7 @@ export type IAcademicSemesterFilters = {
 
 export type IAcademicSemester = {
   title: IAcademicSemesterTitles
-  year: String
+  year: string
   code: IAcademicSemesterCodes
   startMonth: IAcademicSemesterMonths
   endMonth: IAcademicSemesterMonths
