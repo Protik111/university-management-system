@@ -1,4 +1,4 @@
-import { NextFunction, Request, RequestHandler, Response } from 'express'
+import { Request, RequestHandler, Response } from 'express'
 import httpStatus from 'http-status'
 import { paginationFields } from '../../../constants/pagination'
 import catchAsync from '../../../shared/catchAsync'
@@ -9,7 +9,7 @@ import { IAcademicSemester } from './academicSemester.interface'
 import { AcademicSemesterService } from './academicSemester.service'
 
 const createSemester: RequestHandler = catchAsync(
-  async (req: Request, res: Response, next: NextFunction) => {
+  async (req: Request, res: Response) => {
     const { ...academicSemesterData } = req.body
     const result = await AcademicSemesterService.createSemester(
       academicSemesterData,
@@ -21,8 +21,6 @@ const createSemester: RequestHandler = catchAsync(
       message: 'Academic semester created successfully!',
       data: result,
     })
-
-    next()
   },
 )
 
@@ -75,9 +73,23 @@ const updateSemester = catchAsync(async (req: Request, res: Response) => {
   })
 })
 
+const deleteSemester = catchAsync(async (req: Request, res: Response) => {
+  const id = req.params.id
+
+  const result = await AcademicSemesterService.deleteSemester(id)
+
+  sendResponse<IAcademicSemester>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Academic Semester deleted successfully !',
+    data: result,
+  })
+})
+
 export const AcademicSemesterController = {
   createSemester,
   getAllSemesters,
   getSingleSemester,
   updateSemester,
+  deleteSemester,
 }
