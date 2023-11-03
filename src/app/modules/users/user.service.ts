@@ -1,10 +1,14 @@
 import config from '../../../config/index'
 import { IUser } from './user.interface'
 import { User } from './user.model'
-import { generateUserId } from './user.utils'
+import { generateStudentId } from './user.utils'
 
 const createUser = async (user: IUser): Promise<IUser | null> => {
-  const id = await generateUserId()
+  const academicSemesterInfo = {
+    code: '01',
+    year: '2025',
+  }
+  const id = await generateStudentId(academicSemesterInfo)
   user.id = id
 
   if (!user.password) {
