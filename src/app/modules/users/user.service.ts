@@ -1,14 +1,14 @@
 import config from '../../../config/index'
+import { IStudent } from '../student/student.interface'
 import { IUser } from './user.interface'
 import { User } from './user.model'
-import { generateStudentId } from './user.utils'
+import { generateFacultyId } from './user.utils'
 
-const createUser = async (user: IUser): Promise<IUser | null> => {
-  const academicSemesterInfo = {
-    code: '01',
-    year: '2025',
-  }
-  const id = await generateStudentId(academicSemesterInfo)
+const createStudent = async (
+  student: IStudent,
+  user: IUser,
+): Promise<IUser | null> => {
+  const id = await generateFacultyId()
   user.id = id
 
   if (!user.password) {
@@ -24,5 +24,5 @@ const createUser = async (user: IUser): Promise<IUser | null> => {
 }
 
 export const UserService = {
-  createUser,
+  createStudent,
 }
