@@ -12,10 +12,10 @@ export const findLastStudentId = async (): Promise<string | undefined> => {
 }
 
 export const generateStudentId = async (
-  academicSemester: IAcademicSemester,
+  academicSemester: IAcademicSemester | null,
 ): Promise<string> => {
   const currentID =
-    (await findLastStudentId()) || (0).toString().padStart(5, '0')
+    (await findLastStudentId()) || (0).toString().padStart(5, '0') //00000
 
   let incrementedId = (parseInt(currentID) + 1).toString().padStart(5, '0')
 
