@@ -87,7 +87,8 @@ const createStudentZodSchema = z.object({
       profileImage: z.string().optional(),
     }),
   }),
-})
+});
+
 
 // const createUserZodSchema = z.object({
 //   body: z.object({
