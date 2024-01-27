@@ -1,9 +1,9 @@
 import bcrypt from 'bcrypt'
 import { Schema, model } from 'mongoose'
 import config from '../../../config'
-import { IUser, UserModel } from './user.interface'
+import { IUser, IUserMethods, UserModel } from './user.interface'
 
-const userSchema = new Schema<IUser>(
+const userSchema = new Schema<IUser, {}, IUserMethods>(
   {
     id: {
       type: String,
@@ -18,6 +18,13 @@ const userSchema = new Schema<IUser>(
       type: String,
       required: true,
       select: 0
+    },
+    needsPasswordChange: {
+      type: Boolean,
+      default: true,
+    },
+    passwordChangedAt: {
+      type: Date,
     },
     student: {
       type: Schema.Types.ObjectId,
