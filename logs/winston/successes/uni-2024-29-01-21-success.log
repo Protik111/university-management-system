@@ -1,0 +1,12 @@
+{
+  message: 'Database is connected.',
+  level: 'info',
+  label: 'UNI',
+  timestamp: '2024-01-29T15:33:16.646Z'
+}
+{
+  message: 'Server is listening to 5000',
+  level: 'info',
+  label: 'UNI',
+  timestamp: '2024-01-29T15:33:16.657Z'
+}
