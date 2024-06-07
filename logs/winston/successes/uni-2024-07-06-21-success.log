@@ -1,0 +1,24 @@
+{
+  message: 'Database is connected.',
+  level: 'info',
+  label: 'UNI',
+  timestamp: '2024-06-07T15:20:33.971Z'
+}
+{
+  message: 'Server is listening to 5001',
+  level: 'info',
+  label: 'UNI',
+  timestamp: '2024-06-07T15:20:33.992Z'
+}
+{
+  message: 'Database is connected.',
+  level: 'info',
+  label: 'UNI',
+  timestamp: '2024-06-07T15:26:53.852Z'
+}
+{
+  message: 'Server is listening to 5001',
+  level: 'info',
+  label: 'UNI',
+  timestamp: '2024-06-07T15:26:53.870Z'
+}
