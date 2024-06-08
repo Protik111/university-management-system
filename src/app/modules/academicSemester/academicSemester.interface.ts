@@ -32,3 +32,12 @@ export type IAcademicSemester = {
 }
 
 export type AcademicSemesterModel = Model<IAcademicSemester>
+
+export type IAcademicSemesterCreatedEvent = {
+  title: string
+  year: string
+  code: string
+  startMonth: string
+  endMonth: string
+  id: string
+}
